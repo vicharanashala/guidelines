@@ -1098,55 +1098,6 @@ Model versioning enables reproducibility and rollback capability.
 #### Application Development (TypeScript)
 94. Projects MUST use a **layered architecture** per module.
 
-**Recommended structure:**
-```
-src/
-├── modules/
-│   ├── users/
-│   │   ├── controllers/
-│   │   │   └── user.controller.ts
-│   │   ├── services/
-│   │   │   └── user.service.ts
-│   │   ├── models/
-│   │   │   └── user.model.ts
-│   │   ├── dto/
-│   │   │   ├── create-user.dto.ts
-│   │   │   └── user-response.dto.ts
-│   │   └── user.module.ts
-│   ├── orders/
-│   │   └── ...
-├── common/
-│   ├── filters/
-│   │   └── http-exception.filter.ts
-│   ├── guards/
-│   │   └── auth.guard.ts
-│   ├── interceptors/
-│   └── decorators/
-├── config/
-│   └── database.config.ts
-└── main.ts
-```
-
-**Frontend structure:**
-```
-src/
-├── features/
-│   ├── auth/
-│   │   ├── components/
-│   │   ├── hooks/
-│   │   ├── services/
-│   │   └── types/
-│   ├── dashboard/
-│   │   └── ...
-├── components/          # Shared components
-│   ├── ui/
-│   └── layouts/
-├── hooks/              # Shared hooks
-├── services/           # API clients
-├── utils/
-└── types/              # Shared types
-```
-
 **Motivation:**  
 Consistent structure reduces cognitive load and makes codebases navigable.
 
